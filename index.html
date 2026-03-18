@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -36,6 +36,52 @@
   <p>Si no pasa nada, toca el botón:</p>
   <a href="https://play.google.com/store/apps/details?id=com.creativefeeldev.liloapp&pcampaignid=web_share">
     Descargar App
+  </a>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lilo Rides - Descargar</title>
+
+  <script>
+    window.onload = function () {
+      const androidUrl = "https://play.google.com/store/apps/details?id=com.creativefeeldev.liloapp&pcampaignid=web_share";
+      const iosUrl = "https://apps.apple.com/us/app/lilo-rides/id6757496828";
+
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Solo redirige si es móvil
+      if (/android/i.test(userAgent)) {
+        window.location.href = androidUrl;
+      } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        window.location.href = iosUrl;
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Descarga Lilo Rides</h2>
+  <p>Selecciona tu tienda:</p>
+
+  <a href="https://play.google.com/store/apps/details?id=com.creativefeeldev.liloapp&pcampaignid=web_share">
+    Google Play
+  </a>
+
+  <br><br>
+
+  <a href="https://apps.apple.com/us/app/lilo-rides/id6757496828">
+    App Store
   </a>
 </body>
 </html>
