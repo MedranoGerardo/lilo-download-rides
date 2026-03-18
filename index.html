@@ -12,7 +12,7 @@
 
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      // Solo redirige si es móvil
+      // Solo redirige en móviles
       if (/android/i.test(userAgent)) {
         window.location.href = androidUrl;
       } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
@@ -23,24 +23,81 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
-      padding: 50px;
+    }
+
+    .container {
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 12px 0;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .android {
+      background: #34A853;
+      color: white;
+      box-shadow: 0 4px 15px rgba(52,168,83,0.4);
+    }
+
+    .android:hover {
+      transform: scale(1.05);
+      background: #2c8e47;
+    }
+
+    .ios {
+      background: #ffffff;
+      color: black;
+      box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+    }
+
+    .ios:hover {
+      transform: scale(1.05);
+      background: #e6e6e6;
     }
   </style>
 </head>
 <body>
-  <h2>Descarga Lilo Rides</h2>
-  <p>Selecciona tu tienda:</p>
 
-  <a href="https://play.google.com/store/apps/details?id=com.creativefeeldev.liloapp&pcampaignid=web_share">
-    Google Play
-  </a>
+  <div class="container">
+    <h1>Lilo Rides</h1>
+    <p>Descarga la app y comienza tu viaje 🚗</p>
 
-  <br><br>
+    <a class="button android" href="https://play.google.com/store/apps/details?id=com.creativefeeldev.liloapp&pcampaignid=web_share">
+      📱 Descargar en Google Play
+    </a>
 
-  <a href="https://apps.apple.com/us/app/lilo-rides/id6757496828">
-    App Store
-  </a>
+    <a class="button ios" href="https://apps.apple.com/us/app/lilo-rides/id6757496828">
+      🍎 Descargar en App Store
+    </a>
+  </div>
+
 </body>
 </html>
